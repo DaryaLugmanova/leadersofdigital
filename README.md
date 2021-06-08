@@ -5,7 +5,7 @@
 Выполните в консоли:
 ```
 https://github.com/DaryaLugmanova/leadersofdigital.git
-leadersofdigital
+cd leadersofdigital
 python3 -m venv env
 source env/bin/activate
 pip3 install -r requirements.txt
@@ -24,7 +24,6 @@ DB_PORT = Порт базы данных
 ```
 ### Наполните базу данных и создайте админа
 ```
-cd django_site
 python manage.py migrate
 python manage.py createsuperuser
 ```
