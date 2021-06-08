@@ -22,7 +22,12 @@ DB_PASSWORD = Пароль базы данных
 DB_HOST = Хост базы данных
 DB_PORT = Порт базы данных
 ```
+### Установите PostgreSQL
+[Ссылка на скачивание PostgreSQL для всех платформ](https://www.postgresql.org/download/)
+[Подробная инструкция по установке на Windows](https://www.postgresqltutorial.com/install-postgresql/)
+
 ### Наполните базу данных и создайте админа
+
 ```
 python manage.py migrate
 python manage.py createsuperuser
