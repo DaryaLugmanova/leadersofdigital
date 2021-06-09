@@ -1,6 +1,6 @@
 from django.urls import path
 
-from hrv.views import HRVUploadView, HRVResultView
+from apps.hrv.views import HRVUploadView, HRVResultView
 
 urlpatterns = [
     path('upload', HRVUploadView.as_view(), name='upload'),

@@ -1,4 +1,5 @@
 import os
+import sys
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -35,8 +36,8 @@ INSTALLED_APPS = [
 
 
     #  наши приложения
-    'web',
-    'hrv',
+    'apps.web',
+    'apps.hrv',
 ]
 
 MIDDLEWARE = [
@@ -132,3 +133,5 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
