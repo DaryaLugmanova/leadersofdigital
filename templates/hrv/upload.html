@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
 <div class="col-md-10 mx-auto col-lg-5">
     <form class="p-4 p-md-5 border rounded-3 bg-light" enctype="multipart/form-data" method="post">
         <h4 class="form_row"><a name="button-load">Загрузить ритмограмму</a></h4>
@@ -22,8 +19,8 @@
         <div class="form_row">
             <input type="file">
         </div>
-        <a class="btn btn-secondary btn-lg" href="{% url 'result' %}" role="button">Загрузить</a>
+        <a class="btn btn-secondary my-3" href="{% url 'result' %}" role="button">Загрузить</a>
     </form>
 </div>
-</body>
-</html>
+
+{% endblock content %}

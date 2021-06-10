@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
 Результаты вашей ритмограммы<br>
 
-<a class="btn btn-secondary btn-lg" href="{% url 'index' %}" role="button">Вернуться на главную</a>
-</body>
-</html>
+<a class="btn btn-secondary btn-sm" href="{% url 'index' %}" role="button">Вернуться на главную</a>
+
+{% endblock content %}

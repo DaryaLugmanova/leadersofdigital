@@ -1,109 +1,113 @@
 <!doctype html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 <html lang="ru" class="h-100">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.83.1">
-    <title>CardioSpike</title>
+<!--<head>-->
+<!--    <meta charset="utf-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--    <meta name="description" content="">-->
+<!--    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">-->
+<!--    <meta name="generator" content="Hugo 0.83.1">-->
+<!--    <title>CardioSpike</title>-->
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
-
-
-    <!-- Bootstrap core CSS -->
-    <link href="https://github.com/DaryaLugmanova/leadersofdigital/blob/main/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-        
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-        
-        form {
-            color: navy;
-        }
-        
-        .form_row {
-            padding-bottom: 10%;
-        }
+<!--    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">-->
 
 
+<!--    &lt;!&ndash; Bootstrap core CSS &ndash;&gt;-->
+<!--    <link href="https://github.com/DaryaLugmanova/leadersofdigital/blob/main/bootstrap.min.css" rel="stylesheet">-->
 
-    </style>
+<!--    <style>-->
+<!--        .bd-placeholder-img {-->
+<!--            font-size: 1.125rem;-->
+<!--            text-anchor: middle;-->
+<!--            -webkit-user-select: none;-->
+<!--            -moz-user-select: none;-->
+<!--            user-select: none;-->
+<!--        }-->
+<!--        -->
+<!--        @media (min-width: 768px) {-->
+<!--            .bd-placeholder-img-lg {-->
+<!--                font-size: 3.5rem;-->
+<!--            }-->
+<!--        }-->
+<!--        -->
+<!--        form {-->
+<!--            color: navy;-->
+<!--        }-->
+<!--        -->
+<!--        .form_row {-->
+<!--            padding-bottom: 10%;-->
+<!--        }-->
 
 
-    <!-- Custom styles for this template -->
-    <link href="cover.css" rel="stylesheet">
-</head>
+<!--    </style>-->
 
-<body class="d-flex h-100 text-center text-white bg-secondary">
 
-<!--Header-->
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-    <header class="mb-auto">
-        <div>
-            <h3 class="float-md-start mb-0">CardioSpike</h3>
-            <nav class="nav nav-masthead justify-content-center float-md-center">
-                <a class="nav-link active" aria-current="page" href="#About_the_project">О проекте</a>
-                <a class="nav-link" href="#Rules">Правила</a>
-                <a class="nav-link" href="#">Вопросы и ответы</a>
-            </nav>
-            <div class="nav nav-masthead justify-content-center float-md-end col-xs-3 text-end">
-                <button type="button" class="btn btn-secondary me-2">Войти</button>
-                <button type="button" class="btn btn-primary">Зарегистрироваться</button>
-            </div>
-        </div>
-    </header>
+<!--    &lt;!&ndash; Custom styles for this template &ndash;&gt;-->
+<!--    <link href="cover.css" rel="stylesheet">-->
+<!--</head>-->
 
-    <!--Основная часть-->
-    <main class="px-3">
-        <h1><a name="About_the_project">О проекте</a></h1>
-        <p class="lead">Наша команда разработала уникальную методику анализа сердечного ритма. С помощью машинного
-            обучения и нейронных сетей мы проанализировали более 10 тысяч записей ЭКГ и разработали методику определения
-            острых состояний, когда необходимо срочно
-            обратиться ко врачу. Для анализа мы используем ритмограмму, которую можно загрузить
-            <a href="{% url 'upload' %}">здесь</a>
-        </p>
-        <div class="b-example-divider"></div>
+<div class="d-flex h-100 text-center text-white bg-secondary">
 
-        <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-            <div class="row align-items-center g-lg-5 py-5">
-                <div class="col-lg-7 text-center text-lg-start">
-                    <h2 class="display-4 fw-bold lh-1 mb-3"><a name="Rules">Как правильно сделать ритмограмму</a></h2>
-                    <p class="col-lg-10 fs-4">На качество ритмограммы влияет множество факторов: стресс, физические
-                        нагрузки, прием пищи и даже разговоры за окном. Мы собрали несколько простых правил, которые
-                        позволят снизить возможность ошибки до минимума.
-                    <ul>
-                        <li>
-                            Не делайте ритмограмму сразу после приема пищи. Подождите пару часов.
-                        </li>
-                        <li>
-                            Ритмограмму следует делать лежа. Полежите минут 5, расслабьтесь. И только после этого
-                            включайте запись.
-                        </li>
-                        <li>
-                            Если во время записи ритмограммы вы чихнули, закашлялись или у вас зазвонил телефон, то
-                            лучше остановить запись и вернуться к предыдущему пункту.
-                        </li>
-                    </ul>
-                    </p>
+    <!--Header-->
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+            <div>
+                <h3 class="float-md-start mb-0">CardioSpike</h3>
+                <nav class="nav nav-masthead justify-content-center float-md-center">
+                    <a class="nav-link active" aria-current="page" href="#About_the_project">О проекте</a>
+                    <a class="nav-link" href="#Rules">Правила</a>
+                    <a class="nav-link" href="#">Вопросы и ответы</a>
+                </nav>
+                <div class="nav nav-masthead justify-content-center float-md-end col-xs-3 text-end">
+                    <button type="button" class="btn btn-secondary me-2">Войти</button>
+                    <button type="button" class="btn btn-primary">Зарегистрироваться</button>
                 </div>
-
             </div>
-        </div>
-        <h1><a name="Questions">Вопросы и ответы</a></h1>
-        <p class="lead">
+        </header>
+
+        <!--Основная часть-->
+        <main class="px-3">
+            <h1><a name="About_the_project">О проекте</a></h1>
+            <p class="lead">Наша команда разработала уникальную методику анализа сердечного ритма. С помощью машинного
+                обучения и нейронных сетей мы проанализировали более 10 тысяч записей ЭКГ и разработали методику
+                определения
+                острых состояний, когда необходимо срочно
+                обратиться ко врачу. Для анализа мы используем ритмограмму, которую можно загрузить
+                <a href="{% url 'upload' %}">здесь</a>
+            </p>
+            <div class="b-example-divider"></div>
+
+            <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+                <div class="row align-items-center g-lg-5 py-5">
+                    <div class="col-lg-7 text-center text-lg-start">
+                        <h2 class="display-4 fw-bold lh-1 mb-3"><a name="Rules">Как правильно сделать ритмограмму</a>
+                        </h2>
+                        <p class="col-lg-10 fs-4">На качество ритмограммы влияет множество факторов: стресс, физические
+                            нагрузки, прием пищи и даже разговоры за окном. Мы собрали несколько простых правил, которые
+                            позволят снизить возможность ошибки до минимума.
+                        <ul>
+                            <li>
+                                Не делайте ритмограмму сразу после приема пищи. Подождите пару часов.
+                            </li>
+                            <li>
+                                Ритмограмму следует делать лежа. Полежите минут 5, расслабьтесь. И только после этого
+                                включайте запись.
+                            </li>
+                            <li>
+                                Если во время записи ритмограммы вы чихнули, закашлялись или у вас зазвонил телефон, то
+                                лучше остановить запись и вернуться к предыдущему пункту.
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <h1><a name="Questions">Вопросы и ответы</a></h1>
+            <p class="lead">
             <ul>
                 <li>
                     <i>Что такое ритмограмма?</i>
@@ -115,12 +119,10 @@
                     <i>Почему я должен идти ко врачу?</i>
                 </li>
             </ul>
-        </p>
-    </main>
+            </p>
+        </main>
 
+    </div>
 </div>
 
-
-</body>
-
-</html>
+{% endblock content %}
