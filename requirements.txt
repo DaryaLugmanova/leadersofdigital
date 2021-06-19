@@ -1,2 +1,1 @@
-python-dotenv==0.17.1
-psycopg2-binary==2.8.6
+hrv-analysis==1.0.4
